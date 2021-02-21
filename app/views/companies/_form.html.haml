@@ -1,0 +1,8 @@
+=simple_form_for(@company, html: { class: 'form-horizontal'}) do |f|
+  = f.input :title, label: "Company Title"
+  = f.input :description, label: "公司介紹"
+  = f.input :idea, label: "公司理念"
+  = f.input :report, label: "媒體報導"
+  = f.input :salary, label: "薪資福利"
+  %br/
+  = f.button :submit

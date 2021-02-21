@@ -1,0 +1,23 @@
+=simple_form_for(@job, html: { class: 'form-horizontal'}) do |f|
+  = f.input :title, label: "工作名稱"
+  = f.input :description, label: "工作內容"
+  = f.input :require, label: "條件要求"
+  = f.input :welfare, label: "公司福利"
+  = f.input :salary, label: "薪資範圍"
+  .custom-control.custom-switch
+    = f.check_box :is_available, label: "職缺狀態", class: "custom-control-input", id: 'customSwitch1'
+    %label.custom-control-label{:for => "customSwitch1"} 職缺狀態
+  = f.hidden_field :company_id, value: params[:format] || @job.company_id
+  -# :customer_id, value: @customer.id
+  -# %input{:type=>"hidden", :value=>params[:order], :name=>:order}
+  -#  :company_id, type: "hidden", value: @company
+  %br/
+  = f.button :submit
+-#   <div class="custom-control custom-switch">
+-#   <input type="checkbox" class="custom-control-input" id="customSwitch1">
+-#   <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+-# </div>
+  -# <input type="checkbox" name="" id="">
+  -#   <span class="btn-box">
+  -#     <span class="btn"></span>
+  -#   </span>

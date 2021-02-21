@@ -1,0 +1,15 @@
+.container
+  %h2= @job.title
+  %p= '工作內容'
+  %p= @job.description
+  %p= '條件要求'
+  %p= @job.require
+  %p= '公司福利'
+  %p= @job.welfare
+  %p= '薪資範圍'
+  %p= @job.salary
+  %button= link_to "現在應徵", root_path
+
+-# = link_to "Home", root_path
+-# = link_to "Edit", edit_job_path(@job)
+-# = link_to "Delete", job_path(@job), method: :delete, data: { confirm: "Are you sure?" }

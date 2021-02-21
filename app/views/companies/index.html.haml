@@ -1,0 +1,15 @@
+.container
+  %h2 公司列表
+  - @companies.each do |company|
+    .coloum
+      %h2= link_to company.title, company
+      -# %p= '公司介紹'
+      -# %p= company.description
+      -# %p= '公司理念'
+      -# %p= company.idea
+      -# %p= '媒體報導'
+      -# %p= company.report
+      -# %p= '薪資福利'
+      -# %p= company.salary
+
+= link_to "New company", new_company_path

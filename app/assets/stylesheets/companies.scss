@@ -1,0 +1,22 @@
+// Place all the styles related to the companies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container {
+  background-color: #e6e6e6;
+}
+
+p {
+  color: #808080;
+}
+
+.coloum {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+
+  p {
+    margin: 0;
+    color: black;
+  }
+}

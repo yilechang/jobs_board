@@ -1,0 +1,21 @@
+.container
+  %h2= @company.title
+  %p= '公司介紹'
+  %p= @company.description
+  %p= '公司理念'
+  %p= @company.idea
+  %p= '媒體報導'
+  %p= @company.report
+  %p= '薪資福利'
+  %p= @company.salary
+
+  %p= '目前職缺'
+  - @jobs.each do |job|
+    .coloum
+      %p= link_to job.title, job
+
+  = link_to "Home", root_path
+  = link_to "Edit", edit_company_path(@company)
+  = link_to "New job", new_job_path(@company)
+  = link_to "Home", root_path
+  = link_to "Delete", company_path(@company), method: :delete, data: { confirm: "Are you sure?" }

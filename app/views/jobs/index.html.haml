@@ -1,0 +1,25 @@
+.container
+  %h2 職缺列表
+  - @jobs.each do |job|
+    .coloum
+      %h2= link_to job.title, job
+    -# %p= '公司介紹'
+    -# %p= job.description
+  -# %p= '公司理念'
+  -# %p= job.idea
+  -# %p= '媒體報導'
+  -# %p= job.report
+  -# %p= '薪資福利'
+  -# %p= job.salary
+
+-# .container
+-#   %h2 公司列表
+-#   - @companies.each do |company|
+-#     .coloum
+-#       %h2= link_to company.title, company
+
+
+-# - @company.each do |company|
+-#   %h2= link_to company.company, companies_path(:name => company.company)
+
+= link_to "New company", new_company_path
